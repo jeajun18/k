@@ -3,6 +3,7 @@
 }
 
 .mt-5{
+    display:block;
     text-align: center;
 }
 .align-items-center{
@@ -21,10 +22,54 @@
 
 body {
     min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    text-align: center; /* 텍스트와 인라인 요소를 가운데 정렬 */
+    transition: background-color 0.3s, color 0.3s; /* 부드러운 전환 효과 */
+}
+body.light-mode {
+    background-color: #f0f0f0;
+    color: #000;
+}
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
 
-    background: -webkit-gradient(linear, left bottom, right top, from(#92b5db), to(#1d466c));
-    background: -webkit-linear-gradient(bottom left, #92b5db 0%, #1d466c 100%);
-    background: -moz-linear-gradient(bottom left, #92b5db 0%, #1d466c 100%);
-    background: -o-linear-gradient(bottom left, #92b5db 0%, #1d466c 100%);
-    background: linear-gradient(to top right, #92b5db 0%, #1d466c 100%);
-  }
+.clock-container {
+    display: inline-block; /* 컨테이너를 인라인 블록 요소로 설정 */
+    padding: 10px;
+    margin-top: 10px; /* 컨테이너 상단 여백 */
+    background-color: inherit; /* 배경색을 부모 요소와 일치시킴 */
+
+}
+
+#clock, #day {
+    color: #black;
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0 10px; /* 인라인 간격을 위해 margin 추가 */
+}
+
+#theme-toggle {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#theme-toggle.light-mode {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+#theme-toggle.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
