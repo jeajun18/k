@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>creatElement 및 appendChild</title>
+</head>
+<body>
+    <div id="container">
+
+
+    </div>
+    
+    
+    <script>
+        for(let a = 1; a<=5; a+=1){
+           const div = document.getElementById("container")
+            // 일단 태그 만들어서 간직하고 있자.
+            const box = document.createElement("div")
+            box.style.color = "blue"
+            box.style.width = "200px"
+            box.style.height = "200px"
+            box.textContent = "헷갈리지만 신기하고 재미있다!"
+            div.appendChild(box)
+        }
+        // append를 써도 된다.
+        
+
+    /* appendChild 는 html태그만 추가를 할 수 있다.
+    하지만 append는 단순 텍스트 문자열도 추가가 된다. 
+    appendChild는 반환도 해준다.
+    append는 반환을 해주지 않는다. */
+
+
+
+    </script>
+</body>
+</html>
